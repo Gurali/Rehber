@@ -1,7 +1,7 @@
 <html>
 <?php
 try{
-	$dbh = new PDO('mysql:host=localhost;dbname=deneme', "root", "");
+	$dbh = new PDO('mysql:host=localhost;dbname=rehber', "root", "");
 }
 catch{
 	echo "Bağlantı Sağlanamadı!";
