@@ -2,7 +2,7 @@
 <?php
 include "farkli.php";
 session_start();
-session_start();
+
 if($_SESSION['giris'] != 1){
 	header('location:giris.php');
 	exit;
