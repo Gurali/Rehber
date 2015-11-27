@@ -1,0 +1,60 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Anamakine: 127.0.0.1
+-- Üretim Zamanı: 27 Kas 2015, 22:54:36
+-- Sunucu sürümü: 5.6.17
+-- PHP Sürümü: 5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Veritabanı: `rehber`
+--
+CREATE DATABASE IF NOT EXISTS `rehber` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `rehber`;
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `tbl_kisiler`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_kisiler` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ad` varchar(20) COLLATE utf8_turkish_ci NOT NULL,
+  `soyad` varchar(20) COLLATE utf8_turkish_ci NOT NULL,
+  `telefon` varchar(20) COLLATE utf8_turkish_ci NOT NULL,
+  `eposta` varchar(20) COLLATE utf8_turkish_ci NOT NULL,
+  `adres` text COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=12 ;
+
+--
+-- Tablo döküm verisi `tbl_kisiler`
+--
+
+INSERT INTO `tbl_kisiler` (`id`, `ad`, `soyad`, `telefon`, `eposta`, `adres`) VALUES
+(11, 'ali', 'gur', '+90 505 648 98 05', 'asd@gmail.com', 'adana'),
+(9, 'ali', 'gur', '+90 537 463 55 96', 'asfdsadf', 'sdf');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `tbl_yonetici`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_yonetici` (
+  `kullanici` varchar(20) NOT NULL,
+  `sifre` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Tablo döküm verisi `tbl_yonetici`
+--
+
+INSERT INTO `tbl_yonetici` (`kullanici`, `sifre`) VALUES
+('yum', '123456'),
+('ali', '123');
